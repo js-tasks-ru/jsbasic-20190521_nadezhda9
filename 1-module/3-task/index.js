@@ -8,13 +8,17 @@
 
 let inputData = '1, -5.8 или 10, хотя 34 + -5.3 и 73';
 
-function getMinMax(str) {
+function getMinMax(string) {
 	let string = inputData.replace(/[^-0-9./\s/]/g, '').replace(/\s{1,}/g, ',');
 	let arr = string.split(',');
 
-	alert('min = ' + Math.min(...arr));
-	alert('max = ' + Math.max(...arr));
+	let min = Math.min(...arr),
+		max = Math.max(...arr);
+	let res = [].push(min).push(max);
+	console.log(min);
+	console.log(max);
+	console.log(res);
 }
-getMinMax();
+getMinMax(inputData);
 
 
