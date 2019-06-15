@@ -7,16 +7,16 @@
  */
 
 function getMinMax(string) {
-	string = inputData.replace(/[^-0-9./\s/]/g, ',').
+	arr = string.replace(/[^-0-9./\s/]/g, ',').
 					   split(',').
 			           map( function(item) {
 					  		return item * 1; 
 					   });
 	
 	let num = [];
-	for (let i = 0; i < string.length; i++) {
-		if (typeof (string[i]) === 'number') {
-			num.push(string[i]);
+	for (let i = 0; i < arr.length; i++) {
+		if(typeof (arr[i]) === 'number') {
+			num.push(arr[i]);
 		}
 	}
 
@@ -26,7 +26,6 @@ function getMinMax(string) {
 	let res = {};
 		res.min = min;
 		res.max = max; 
-	return res;	
 }
-getMinMax();
+getMinMax(string);
 
