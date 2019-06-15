@@ -6,21 +6,6 @@
  * @return {HTMLUListElement}
  */
 
-let friends = [
-    {
-        firstName: 'Artsiom',
-        lastName: 'Mezin'
-    },
-    {
-        firstName: 'Ilia',
-        lastName: 'Kantor'
-    },
-    {
-        firstName: 'Christopher',
-        lastName: 'Michael'
-    }
-];
-
 function makeFriendsList(friends) {  
 	let ul = document.createElement('ul');
 	document.body.appendChild(ul);
@@ -31,4 +16,4 @@ function makeFriendsList(friends) {
 		ul.appendChild(li);
 	}
 }
-makeFriendsList(friends);
+
