@@ -7,7 +7,7 @@
  */
 
 function getMinMax(string) {
-	string = inputData.replace(/[^-0-9./\s/]/g, ',');
+	let string = inputData.replace(/[^-0-9./\s/]/g, ',');
 	
 	let arr = string.split(',');
 		
