@@ -11,11 +11,16 @@ function print (text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
-function isValid (name) {
-}
-
 function sayHello () {
-    let userName = prompt('Введите ваше имя');
+	let userName = prompt('Введите ваше имя', '');
+
+	function isValid (name) {
+		if (name !== null && name !== '' && name.length > 4 && (!/\s/.test(name))) {
+	        return true;
+		} else {
+			return false;
+		}	
+	}
 
     if (isValid(userName)) {
         print('Welcome back, ' + userName + '!');
@@ -23,6 +28,5 @@ function sayHello () {
         print('Некорректное имя');
     }
 }
-
 sayHello();
 
