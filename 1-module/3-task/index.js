@@ -12,16 +12,13 @@ function getMinMax(string) {
 			           map( function(item) {
 					  		return item * 1; 
 					   });
-	console.log(string);
 	
 	let num = [];
 	for (let i = 0; i < string.length; i++) {
-		if(typeof (string[i]) === 'number') {
+		if (typeof (string[i]) === 'number') {
 			num.push(string[i]);
 		}
-		
 	}
-console.log(num);
 
 	let min = Math.min(...num),
 		max = Math.max(...num);
@@ -29,7 +26,6 @@ console.log(num);
 	let res = {};
 		res.min = min;
 		res.max = max; 
-	console.log(res);
 }
 getMinMax();
 
