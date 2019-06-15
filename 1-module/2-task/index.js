@@ -16,7 +16,7 @@ function sayHello () {
 	let userName = prompt('Введите ваше имя', '');
 
 	function isValid (name) {
-		if (name === null || name != '' || name.length < 4 || (/\s/.test(name)) {
+		if (name === null || name === '' || name.length < 4 || (/\s/.test(name))) {
 	        return false;
 		} 
 		return true;
