@@ -4,8 +4,6 @@
  * @param {number} n index
  * @returns {number}
  */
-let m = +prompt('Введите число', ''),
-	n = +prompt('Задайте степень числа', '');
 
 function pow(m, n) {
 	while(n < 1 && n == 0) {
@@ -18,4 +16,6 @@ function pow(m, n) {
 	    return m;
 	}
 }
-alert(pow(m, n));
+alert(pow(3, 2));
+alert(pow(3, 3));
+alert( pow(1, 100));

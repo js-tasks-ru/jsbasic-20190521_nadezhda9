@@ -6,7 +6,7 @@
  */
 function sum (m, n) {
 	let result = m + n;
-	console.log('Сумма чисел равна: ' + result);
+	alert('Сумма чисел равна: ' + result);
 }
 sum(1, 1);
 sum(2, 5);

@@ -11,7 +11,8 @@ function print (text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
-function sayHello () {
+
+function sayHello (name) {
 	let userName = prompt('Введите ваше имя', '');
 
 	function isValid (name) {
