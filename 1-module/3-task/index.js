@@ -26,6 +26,7 @@ function getMinMax(string) {
 	let res = {};
 		res.min = min;
 		res.max = max; 
+	return res;	
 }
 getMinMax();
 
