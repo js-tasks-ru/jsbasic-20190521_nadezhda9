@@ -7,7 +7,7 @@
  */
 
 function getMinMax(string) {
-	let string = inputData.replace(/[^-0-9./\s/]/g, ',').
+	string = inputData.replace(/[^-0-9./\s/]/g, ',').
 					   split(',').
 			           map( function(item) {
 					  		return item * 1; 
