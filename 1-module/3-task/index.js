@@ -16,14 +16,10 @@ function getMinMax(string) {
 	let min = Math.min(...arr),
 		max = Math.max(...arr);
 		
-	let res = { min: min,
-				max: max
-	};
-	
-	const keys = Object.keys(res);
-	keys.forEach(function(key) {
-  		return(key + ': ' + res[key]);
-	});		
+	let res = {};
+		res.min = min;
+		res.max = max; 
+	return res;
 }
 getMinMax(inputData);
 
