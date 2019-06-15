@@ -5,8 +5,6 @@
  * @returns {number}
  */
 function sum (m, n) {
-	let result = m + n;
-	alert('Сумма чисел равна: ' + result);
+	return (m + n);
 }
-sum(1, 1);
-sum(2, 5);
+sum (1, 1);
