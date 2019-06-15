@@ -6,7 +6,7 @@
  * @return {HTMLUListElement}
  */
 
-function makeFriendsList() {  
+function makeFriendsList(friends) {  
 	let ul = document.createElement('ul');
 	document.body.appendChild(ul);
 	
