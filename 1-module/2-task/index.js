@@ -12,15 +12,14 @@ function print (text) {
  * чтобы функция sayHello работала корректно
  */
 
-function sayHello (name) {
+function sayHello () {
 	let userName = prompt('Введите ваше имя', '');
 
 	function isValid (name) {
-		if (name !== null && name !== '' && name.length > 4 && (!/\s/.test(name))) {
-	        return true;
-		} else {
-			return false;
-		}	
+		if (name === null || name != '' || name.length < 4 || (/\s/.test(name)) {
+	        return false;
+		} 
+		return true;
 	}
 
     if (isValid(userName)) {
@@ -30,4 +29,3 @@ function sayHello (name) {
     }
 }
 sayHello();
-
