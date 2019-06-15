@@ -16,4 +16,4 @@ function makeFriendsList(friends) {
 		ul.appendChild(li);
 	}
 }
-
+makeFriendsList(friends);
