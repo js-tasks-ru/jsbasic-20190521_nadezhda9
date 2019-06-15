@@ -19,5 +19,5 @@ function getMinMax(string) {
 	};
 	return res;		
 }
-getMinMax();
+getMinMax(inputData);
 
