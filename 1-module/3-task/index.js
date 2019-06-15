@@ -27,5 +27,5 @@ function getMinMax(string) {
 		res.min = min;
 		res.max = max; 
 }
-getMinMax(string);
+
 
