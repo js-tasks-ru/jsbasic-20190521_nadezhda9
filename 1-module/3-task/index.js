@@ -6,8 +6,10 @@
  * @returns {{min:number, max:number}}  объект
  */
 
+let inputData = '1, -5.8 или 10, хотя 34 + -5.3 и 73';
+
 function getMinMax(string) {
-	let string = inputData.replace(/[^-0-9./\s/]/g, ',');
+	string = inputData.replace(/[^-0-9./\s/]/g, ',');
 	
 	let arr = string.split(',');
 		
@@ -17,7 +19,11 @@ function getMinMax(string) {
 	let res = { min: min,
 				max: max
 	};
-	return res;		
+	
+	const keys = Object.keys(res);
+	keys.forEach(function(key) {
+  		console.log(key + ': ' + res[key]);
+	});		
 }
 getMinMax(inputData);
 
