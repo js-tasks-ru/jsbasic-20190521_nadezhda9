@@ -6,8 +6,6 @@
  * @returns {{min:number, max:number}}  объект
  */
 
-let inputData = '1, -5.8 или 10, хотя 34 + -5.3 и 73';
-
 function getMinMax(string) {
 	string = inputData.replace(/[^-0-9./\s/]/g, ',');
 	
@@ -21,5 +19,5 @@ function getMinMax(string) {
 	};
 	return res;		
 }
-getMinMax(inputData);
+getMinMax();
 
