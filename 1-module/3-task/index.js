@@ -14,7 +14,6 @@ function getMinMax(string) {
 	
 	let res = [];
 		res.push(Math.min(...arr), Math.max(...arr));
-	console.log()
 }
-getMinMax(inputData);
+console.log(getMinMax(inputData));
 
