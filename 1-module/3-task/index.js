@@ -22,7 +22,7 @@ function getMinMax(string) {
 	
 	const keys = Object.keys(res);
 	keys.forEach(function(key) {
-  		console.log(key + ': ' + res[key]);
+  		return(key + ': ' + res[key]);
 	});		
 }
 getMinMax(inputData);
