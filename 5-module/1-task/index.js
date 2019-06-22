@@ -33,8 +33,8 @@
 	};
 */
 
-function highlight(table) {
-    table = document.querySelector('tbody');
+function highlight() {
+    let table = document.querySelector('tbody');
 	
 	for (let row of table.rows) {
 		let age = row.cells[1],
