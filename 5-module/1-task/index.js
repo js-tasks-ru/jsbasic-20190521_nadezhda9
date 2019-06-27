@@ -37,14 +37,14 @@ function highlight(table) {
     let tbody = document.querySelector('tbody');
 	
 	for (let row of tbody.rows) {
-		let age = row.cells[1];
-		let gender = row.cells[2];
-		let status = row.cells[3];
+		let age = row.cells[1],
+		    gender = row.cells[2],
+		    status = row.cells[3];
 	
 		row.classList.add((status.dataset.available === 'true') ? 'available' : 'unavailable');
 
 		if (status.dataset.available === undefined) {
-			row.getAttribute('hidden');
+			row.hidden = true;
 		}
 
 		row.classList.add((gender.innerHTML === 'm') ? 'male' : 'female');
