@@ -33,27 +33,47 @@
 	};
 */
 
-function highlight(table) {
-    let tbody = document.querySelector('tbody');
+// function highlight(table) {
+//     let tbody = document.querySelector('tbody');
 	
-	for (let row of tbody.rows) {
-		let age = row.cells[1],
-		    gender = row.cells[2],
-		    status = row.cells[3];
-	//# 1
-		row.classList.add((status.dataset.available === 'true') ? 'available' : 'unavailable');
+// 	for (let row of tbody.rows) {
+// 		let age = row.cells[1],
+// 		    gender = row.cells[2],
+// 		    status = row.cells[3];
+// 	//# 1
+// 		row.classList.add((status.dataset.available === 'true') ? 'available' : 'unavailable');
 
-		if (status.dataset.available === undefined) {
-			row.getAttribute('hidden');
-		}
+// 		if (status.dataset.available === undefined) {
+// 			row.getAttribute('hidden');
+// 		}
 
-	//# 2
-		row.classList.add((gender.innerHTML === 'm') ? 'male' : 'female');
+// 	//# 2
+// 		row.classList.add((gender.innerHTML === 'm') ? 'male' : 'female');
    
-	//# 3
-		if (age.innerHTML < 18) {
-			row.style.textDecorationLine = 'line-through'; 
-		}
-	}
-}
+// 	//# 3
+// 		if (age.innerHTML < 18) {
+// 			row.style.textDecorationLine = 'line-through'; 
+// 		}
+// 	}
+// }
 
+function highlight(table) {
+    let tbody = table.querySelector('tbody');
+    for (let row of tbody.rows) {
+        let ageCell = row.cells[1];
+        let genderCell = row.cells[2];
+        let statusCell = row.cells[3];
+
+        if (statusCell.dataset.available === undefined) {
+            row.hidden = true;
+        }
+
+        row.classList.add(statusCell.dataset.available === 'true' ? 'available' : 'unavailable');
+
+        row.classList.add(genderCell.innerHTML === 'm' ? 'male' : 'female');
+        
+        if (parseInt(ageCell.innerHTML) < 18) {
+            row.style.textDecoration = 'line-through';
+        }
+    }
+}
