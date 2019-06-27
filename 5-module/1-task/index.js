@@ -33,10 +33,10 @@
 	};
 */
 
-function highlight() {
-    let table = document.querySelector('tbody');
+function highlight(table) {
+    let tbody = document.querySelector('tbody');
 	
-	for (let row of table.rows) {
+	for (let row of tbody.rows) {
 		let age = row.cells[1],
 		    gender = row.cells[2],
 		    status = row.cells[3];
