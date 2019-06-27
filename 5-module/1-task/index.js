@@ -45,7 +45,7 @@ function highlight(table) {
 		row.classList.add((status.dataset.available === 'true') ? 'available' : 'unavailable');
 
 		if (status.dataset.available === undefined) {
-			row.getAttribute('hidden');
+			row.hidden = true;
 		}
 
 	//# 2
@@ -53,7 +53,7 @@ function highlight(table) {
 
 	//# 3
 		if (age.innerHTML < 18) {
-			row.style.textDecorationLine = 'line-through'; 
+			row.style.textDecoration = 'line-through'; 
 		}
 	}
 }
