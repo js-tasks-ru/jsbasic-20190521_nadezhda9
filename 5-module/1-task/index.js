@@ -34,21 +34,24 @@
 */
 
 function highlight(table) {
-    let tbody = document.querySelector('tbody');
+    let tbody = table.querySelector('tbody');
 	
 	for (let row of tbody.rows) {
 		let age = row.cells[1],
 		    gender = row.cells[2],
 		    status = row.cells[3];
 	
+	//# 1
 		row.classList.add((status.dataset.available === 'true') ? 'available' : 'unavailable');
 
 		if (status.dataset.available === undefined) {
-			row.hidden = true;
+			row.getAttribute('hidden');
 		}
 
+	//# 2
 		row.classList.add((gender.innerHTML === 'm') ? 'male' : 'female');
 
+	//# 3
 		if (age.innerHTML < 18) {
 			row.style.textDecorationLine = 'line-through'; 
 		}
